@@ -39,6 +39,10 @@ import { SelectUserComponent } from './sf/user/select-user/select-user.component
 import { CreateUserComponent } from './sf/user/create-user/create-user.component';
 import { SelectSchoolComponent } from './sf/school/select-school/select-school.component';
 import { CreateSchoolComponent } from './sf/school/create-school/create-school.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { HomeCoverComponent } from './home-cover/home-cover.component';
+import { AboutSectionComponent } from './about-section/about-section.component';
+import { LoginModalComponent } from './login-modal/login-modal.component';
 
 
 @NgModule({
@@ -67,6 +71,11 @@ import { CreateSchoolComponent } from './sf/school/create-school/create-school.c
         CreateUserComponent,
         SelectSchoolComponent,
         CreateSchoolComponent,
+        NavBarComponent,
+        HomeCoverComponent,
+        AboutSectionComponent,
+        LoginModalComponent,
+        
         
     ],
     imports: [

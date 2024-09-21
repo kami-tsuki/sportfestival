@@ -1,0 +1,5 @@
+.nv{background-color: rgb(255, 206, 127) !important;}
+.nav-link:hover{
+    background-color: seagreen;
+    color: white !important;
+}
