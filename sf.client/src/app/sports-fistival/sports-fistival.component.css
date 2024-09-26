@@ -1,0 +1,10 @@
+.car{
+    height: 500px;
+}
+
+.foto img {
+    width: auto;            
+    height:500px;          
+    object-fit: contain; 
+    filter: brightness(50%);  
+}
