@@ -1,6 +1,6 @@
 
 
-<nav class=" nv navbar navbar-expand-lg ">
+<nav class=" nv navbar navbar-expand-lg " id="nav-item">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="assets\logo.png"  alt="Logo" width="60"  class=""></a>
@@ -18,13 +18,18 @@
             <a class="nav-link text-success" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-success" routerLink="/contact">Contact</a>
+            <a class="nav-link text-success" href="#sport">Sports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-success" href="#contact">Contact</a>
           </li>    
 
         </ul>
         <form class="d-flex">
-          <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
-            Log-in</button>
+          <button *ngIf="!(isStudentPage || isTeacherPage)" (click)="openLoginModal()" class="btn btn-outline-success">Login</button>
+          <button *ngIf="isStudentPage || isTeacherPage" (click)="logout()" class="btn btn-outline-danger">Logout</button>
+
+
         </form>
       </div>
     </div>

@@ -1,27 +1,21 @@
+<div class="mat-dialog-content" fxLayout="column" fxLayoutAlign="center center">
+  <h2 mat-dialog-title class="text-center text-success">Login</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="container">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username">
+      <mat-error *ngIf="loginForm.get('username')?.invalid">Username is required</mat-error>
+    </mat-form-field>
 
+    <mat-form-field  class="container">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password">
+      <mat-error *ngIf="loginForm.get('password')?.invalid">Password is required</mat-error>
+    </mat-form-field>
 
- <!-- Modal -->
- <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-success" id="loginModalLabel">Log In</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="mb-3">
-                        <label for="username" class="form-label text-success">Username</label>
-                        <input type="text" class="form-control " id="username" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label text-success">Password</label>
-                        <input type="password" class="form-control" id="password" required>
-                    </div>
-                    <button type="submit" class="btn btn-success">Log In</button>
-                </form>
-            </div>
-        </div>
+    <div mat-dialog-actions class="justify-content-center">
+      <button mat-button [mat-dialog-close] class="text-danger">Cancel</button>
+      <button mat-button type="submit" class="text-success">Login</button>
     </div>
-  </div>
-  
+  </form>
+</div>

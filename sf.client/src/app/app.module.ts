@@ -40,15 +40,21 @@ import { CreateUserComponent } from './sf/user/create-user/create-user.component
 import { SelectSchoolComponent } from './sf/school/select-school/select-school.component';
 import { CreateSchoolComponent } from './sf/school/create-school/create-school.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { HomeCoverComponent } from './home-cover/home-cover.component';
-import { AboutSectionComponent } from './about-section/about-section.component';
+import { HomeCoverComponent } from './main-layout/home-cover/home-cover.component';
+import { AboutSectionComponent } from './main-layout/about-section/about-section.component';
 import { LoginModalComponent } from './login-modal/login-modal.component';
+import { StudentPageComponent } from './student-page/student-page.component';
+import { TeacherPageComponent } from './teacher-page/teacher-page.component';
+import { SportsFistivalComponent } from './main-layout/sports-fistival/sports-fistival.component';
+import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @NgModule({
-    bootstrap: [
-        AppComponent
-    ],
+
     declarations: [
         AppComponent,
         ClassListComponent,
@@ -75,6 +81,11 @@ import { LoginModalComponent } from './login-modal/login-modal.component';
         HomeCoverComponent,
         AboutSectionComponent,
         LoginModalComponent,
+        StudentPageComponent,
+        TeacherPageComponent,
+        SportsFistivalComponent,
+        ContactComponent,
+        MainLayoutComponent,
         
         
     ],
@@ -83,6 +94,7 @@ import { LoginModalComponent } from './login-modal/login-modal.component';
         BrowserAnimationsModule,
         HttpClientModule,
         AppRoutingModule,
+        RouterModule,
         MatSnackBarModule,
         CommonModule,
         FormsModule,
@@ -97,6 +109,11 @@ import { LoginModalComponent } from './login-modal/login-modal.component';
         MatCardContent,
         MatCardTitle,
         MatCardActions,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+    ],
+    bootstrap: [
+        AppComponent
     ],
     providers: [
         CacheService,
